@@ -14,13 +14,10 @@
 			 font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 		}
 
-
-
 		#container {
-			width: 80rem;
+			width: 60rem;
 			margin: 0 auto;
 			background-color: white;
-			height: 100%;
 		}
 
 		header {
@@ -30,16 +27,17 @@
 			height: 10rem;
 			background-color: #5F1A1C;
 			padding: 0 1rem 1rem 1rem;
+			box-sizing: border-box;
 		}
 
 		#headlineArea {
 			flex: 1;
-			margin: 4rem;
+			margin: 2.5rem;
 		}
 
 		#bannerArea {
 			flex: 2;
-			margin: 3rem;
+			margin: 2rem;
 		}
 
 		header img {
@@ -52,6 +50,7 @@
 			color: white;
 			height: 3.8rem;
 			padding: 0.2rem 1rem 0 1rem;
+			box-sizing: border-box;
 		}
 
 		nav li {
@@ -66,8 +65,13 @@
 		}
 
 		main {
-			margin: 1rem;
-			width: 95%;
+			margin: 1rem auto;
+			width: 90%;
+		}
+
+		.dateRow {
+			width: 100%;
+			text-align: right;
 		}
 
 		.bar {
@@ -79,26 +83,60 @@
 		}
 
 		.threeColStandard {
-			display: flex;
+  			display: flex;
+  			justify-content: space-between;
 		}
 
 		.twoColStandard {
 			display: flex;
+  			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		.threeColStandard .articleItem {
+			width: 33%;
+		}
+
+		.twoColStandard .articleItem {
+			width: 49%;
 		}
 
 		.articleItem img {
 			width: 100%;
 		}
 
-		.articleItem {
-			margin: 0.2rem;
-		}
-
 		.articleItem p {
-			margin-top: -10px;
+			margin-top: -5px;
 			background-color: black;
 			color: white;
 			padding: 1rem;
+			min-height: 4rem;
+		}
+
+		footer {
+			background-color: black;
+			padding: 1rem;
+		}
+
+		.footerNav li {
+			display: inline;
+		}
+
+		.footerNav a {
+			font-size: 120%;
+			color: white;
+			text-decoration: none;
+			padding: 0.5rem 1rem;
+		}
+
+		.footerLogoBar {
+			text-align: right;
+			height: 4rem;
+		}
+
+		.copyrightBar {
+			color: white;
+			text-align: center;	
 		}
 
 	</style>
@@ -106,7 +144,7 @@
 </head>
 <body>
 
-	<div class="container">
+	<div id="container">
 
 		<header id="header">
 			<div id="headlineArea">
@@ -127,6 +165,10 @@
 		</nav>
 
 		<main>
+
+			<div class="dateRow">
+				Friday, 14.09.2018
+			</div>
 
 			<div class="bar">
 				Top news
@@ -249,7 +291,7 @@
 				<img src="img/logo-newspaper-cf.png" alt="Logo Newspaper Code Factory">
 			</div>
 
-			<div class="coprightBar">
+			<div class="copyrightBar">
 				Marin - CodeFactory 2020
 			</div>
 
