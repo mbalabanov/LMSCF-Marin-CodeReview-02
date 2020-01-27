@@ -10,16 +10,21 @@
 	</head>
 	<body>
 
+		<!-- Container to limit the width and center the main content. The CSS only applies to full desktop width. Tablet portrait and Smartphone breakpoints extend the container to full width. -->
 		<div id="container">
+
 			<header id="header">
 				<div id="headlineArea">
 					<a href="#" id="linki"><img src="img/logo-newspaper-cf.png" alt="Logo Newspaper Code Factory"></a>
 				</div>
+
+				<!-- Banner area disappears at Smartphone breakpoint -->
 				<div id="bannerArea">
 					<a href="https://www.codefactory.wien" target="_blank"><img src="img/banner-1.png" alt="Code Factory Banner"></a>
 				</div>
 			</header>
 
+			<!-- Navigation shows current item highlighted -->
 			<nav>
 				<ul>
 					<li><a href="index.html" title="Home" class="active">Home</a></li>
@@ -29,6 +34,7 @@
 				</ul>
 			</nav>
 
+			<!-- Main content Area consists of two simple bars for date and category, but then continues with two divs with the class columnRow  to accommodate the larger area with the article items on the left and then display the vertical banner on the right. -->
 			<main>
 				<div class="dateRow">
 					Friday, 14.09.2018
@@ -38,10 +44,13 @@
 					Top news
 				</div>
 
+				<!-- First columnRow starts here. Is set to be Flex, so that the banner is shown on the right. -->
 				<div class="columnRow">
 					
+					<!-- This div contains the article items that occupy three columns. -->
 					<div class="threeColStandard">
 
+						<!-- Each article item has the same structure with a div, an anchor containing an image, and a paragraph with a linked description. -->
 						<div class="articleItem">
 							<a href="article1.html"><img src="img/nasa.png" alt="NASA"></a>
 							<p><a href="article1.html">NASA is trying to squash conspiracy theories about the space station leak</a></p>
@@ -57,12 +66,13 @@
 							<p><a href="article3.html">Jeff Bezos is going to create school where 'the cild is the customer'</a></p>
 						</div>
 
-
+						<!-- This div is only displayed at the smartphone breakpoint it has a distinct look (i.e. the mobile item class) and is only toggled on when at smartphone width (i.e. toggle class) -->
 						<div class="mobileItem toggleItemOn">
 							<a href="article4.html"><a href="https://www.codefactory.wien"><img src="img/banner-mobile-fswd.png" alt="FSWD"></a></a>
 							<p><a href="article4.html">&nbsp;</a></p>
 						</div>
 
+						<!-- This category heading bar extends across the width of all three columns. -->
 						<div class="bar">
 							Popular
 						</div>
@@ -82,6 +92,7 @@
 							<p><a href="article7.html">Edward Snowden surveillance powers ruled unlawful</a></p>
 						</div>
 
+						<!-- This is the short version of the next large article item. It is only displayed at mobile breakpoints, when its larger counterpart with the same content (see first article item in the two column area) is hidden. -->
 						<div class="articleItem toggleItemOn">
 							<a href="article8.html"><img src="img/iphone.jpg" alt="iPhone XS"></a>
 							<p><a href="article8.html">How to preorder the iPhone XS, XS Max, and XR</a></p>
@@ -89,20 +100,24 @@
 
 					</div>
 
+					<!-- This vertical bar is set to the right of the three column div. It is hidden at mobile breakpoints. -->
 					<div class="verticalBanner">
 						<a href="https://www.codefactory.wien"><img src="img/banner-2.png" alt="Vertical Banner FSWD"></a>
 					</div>
 
 				</div>
 
+					<!-- This wide banner ad extends across the full width of all three columns. -->
 				<div class="bannerBar">
 					<a href="https://www.codefactory.wien"><img src="img/banner-3.png" alt="How to become a developer"></a>
 				</div>
 
+				<!-- This is the start of the second section. It contains a two column div and a vertical banner to the right of it. -->
 				<div class="columnRow">
 
 					<div class="twoColStandard">
 
+						<!-- This is the counterpart article item to the last hidden three column article item above. It is displayed at full desktop width and hidden at mobile breakpoints. Then the three column counterpart above is shown instead. -->
 						<div class="articleItem toggleItemOff">
 							<a href="article8.html"><img src="img/iphone.png" alt="iPhone XS"></a>
 							<p><a href="article8.html">How to preorder the iPhone XS, XS Max, and XR</a></p>
@@ -125,6 +140,7 @@
 
 					</div>
 
+					<!-- This is the vertical banner that is displayed to the right of the two column div at full desktop width. It is hidden at mobile breakpoints. -->
 					<div class="verticalBanner">
 						<a href="https://www.codefactory.wien"><img src="img/banner-4.png" alt="Vertical Banner FSWD"></a>
 					</div>
@@ -135,6 +151,7 @@
 
 			<footer>
 				
+				<!-- The footer navigation uses the same CSS as the navigation in the head. It also highlights the link of the current page using the active class. -->
 				<div class="footerNav">
 					<ul>
 						<li><a href="#" title="Home" class="active">Home</a></li>

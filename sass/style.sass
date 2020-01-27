@@ -1,12 +1,15 @@
+/* *** SASS file used to generate the style sheet for all pages *** */
 body
 	background-color: lightgray
 	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
 
+// Container set to fixed widht and centered horizontally across the view port in full desktop width.
 #container
 	width: 60rem
 	margin: 0 auto
 	background-color: white
 
+// Header set to flex to accommodate logo and banner area
 header 
 	display: flex
 	flex-direction: row
@@ -27,6 +30,7 @@ header
 header img
 	width: 100%
 
+// Top page navigation shows the currently active item (using the class active)
 nav
 	width: 100%
 	background-color: black
@@ -47,6 +51,7 @@ nav
 	.active
 		color: red
 
+// Main content leaves space to the left and right.
 main
 	margin: 1rem auto
 	width: 90%
@@ -54,6 +59,7 @@ main
 	img
 		width: 100%
 
+// This only applies to the text of full articles to make them more readable (i.e. not on index.html).
 article p
 	font-size: 130%
 
@@ -68,14 +74,17 @@ article p
 	margin-top: 0.5rem
 	margin-bottom: 0.5rem
 
+// This class is used to display multicolumn divs to the left of vertical banners (to the right).
 .columnRow
 	display: flex
 
+// These are the vertical banners that are displayed to the right of multicolumn content.
 .verticalBanner
 	width: 17%
 	margin-left: 0.8rem
 	margin-left: 0.8rem
 
+// The first of two classes used for multicolumn content. In this case the content has three columns (hence the name :-) ).
 .threeColStandard
 	display: flex
 	flex-wrap: wrap
@@ -85,6 +94,7 @@ article p
 	.articleItem
 		width: 33%
 
+// The second of two classes used for multicolumn content. In this case the content has two columns (hence the name :-) ).
 .twoColStandard
 	display: flex
 	justify-content: space-between
@@ -94,6 +104,7 @@ article p
 	.articleItem
 		width: 49%
 
+// Standard article box on index page.
 .articleItem p, .mobileItem p
 	margin-top: -5px
 	background-color: black
@@ -108,15 +119,18 @@ article p
 .mobileItem p
 	background-color: #009BA9
 
+// Toggle the visibility of divs that are only to be shown or hidden at certain breakpoints.
 .toggleItemOn
 	display: none
 
+// Banners that extend across the width of multicolumn content.
 .bannerBar
 	text-align: center
 	margin-top: 1rem
 	margin-bottom: 1rem
 	box-sizing: content-box
 
+// The footer navigation shows the link to the current page highlighted.
 footer
 	background-color: black
 	padding: 1rem
@@ -139,24 +153,28 @@ footer
 
 	.copyrightBar
 		color: white
-		text-align: center
+		text-align: center 
 
 /* Media Query for Tablets in Portrait mode */
 @media only screen and (max-width: 768px)
 
+	// Extends the container to full width of display port.
 	#container
 		width: 100%
 		margin: 0
 
+	// Hides the vertical banner ads.
 	.verticalBanner
 		display: none
 
+	// Extends the multicolumn divs to full width, because the vertical banner ads have been removed.
 	.threeColStandard
 		width: 100%
 
 	.twoColStandard
 		width: 100%
 
+	// Increases the minimum height of the description below the image in each article item.
 	.articleItem p, .mobileItem p
 		padding: 0.4rem
 		min-height: 5rem
@@ -164,13 +182,20 @@ footer
 /* Media Query for Smartphones (changed to 640px instead of 480px) */
 @media only screen and (max-width: 640px)
 
+	// Extends the container to full width of display port.
 	#container
 		width: 100%
 		margin: 0
 
+	// Hides banner in header
+	#bannerArea
+		display: none
+
+	// Hides the vertical banner ads.
 	.verticalBanner, .bannerBar
 		display: none
 
+	// Toggles visibility of mobile counterparts of larger article items.
 	.toggleItemOn
 		display: block
 		width: 49%
@@ -178,23 +203,20 @@ footer
 	.toggleItemOff
 		display: none
 
-	.verticalBanner
-		display: none
-
+	// Extends the multicolumn divs to full width, because the vertical banner ads have been removed.
 	.threeColStandard
 		width: 100%
 
 	.twoColStandard
 		width: 100%
 
+	// Turns three column article items to two column ones.
 	.threeColStandard .articleItem
 		width: 49%
 
 	.articleItem p, .mobileItem p
 		min-height: 4rem
 
-	#bannerArea
-		display: none
-
+	// Centers the alignment of the logo in the footer.
 	.footerLogoBar
 		text-align: center
